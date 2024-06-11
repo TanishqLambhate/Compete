@@ -45,3 +45,26 @@ for _ in range(int(input())):
         b=a[:]
     print(maxi)
 ```
+```python
+
+#The largest subarray with even sum is the subarray 
+#[2,2,1,1][2,2,1,1] having size 4
+
+# cook your dish here
+for _ in range(int(input())):
+    n=int(input())
+    # a=[0]*n
+    a=list(map(int,input().split()))
+    sums=0
+    st=0
+    res=[]
+    for i in range(n):
+        for j in range(i+1,n+1):
+            if sum(a[i:j])%2==0:
+                res.append(len(a[i:j]))
+        
+    if res:        
+        print(max(res))
+    else:
+        print(0)
+```
